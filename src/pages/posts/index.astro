@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PostCard from '../../components/PostCard.svelte';
+
+// すべての記事を取得
+const posts = await Astro.glob('../../../content/posts/*.md');
+const sortedPosts = posts
+  .map(post => ({
+    slug: post.file.split('/').pop().replace('.md', ''),
+    data: post.frontmatter
+  }))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+
+<Layout title="記事一覧 | ガレージヨコタバンド">
+  <section class="posts-section">
+    <h1>記事一覧</h1>
+    
+    <div class="post-grid">
+      {sortedPosts.map((post, index) => (
+        <PostCard post={post} index={index} client:load />
+      ))}
+      
+      {sortedPosts.length === 0 && (
+        <p class="no-posts">まだ記事がありません。</p>
+      )}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .posts-section {
+    padding: 1rem 0 3rem;
+  }
+  
+  h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .no-posts {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .post-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

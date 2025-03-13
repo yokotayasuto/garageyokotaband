@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PostCard from '../components/PostCard.svelte';
+
+// 記事の取得（最新5件）
+const posts = await Astro.glob('../../content/posts/*.md');
+const sortedPosts = posts
+  .map(post => ({
+    slug: post.file.split('/').pop().replace('.md', ''),
+    data: post.frontmatter
+  }))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 5);
+---
+
+<Layout title="ガレージヨコタバンド">
+  <section class="hero">
+    <h1>ガレージヨコタバンド</h1>
+    <p>音楽と日常の記録</p>
+  </section>
+  
+  <section class="latest-posts">
+    <div class="section-header">
+      <h2>最新の記事</h2>
+      <a href="/posts" class="view-all">すべての記事を見る →</a>
+    </div>
+    
+    <div class="post-grid">
+      {sortedPosts.map((post, index) => (
+        <PostCard post={post} index={index} client:load />
+      ))}
+      
+      {sortedPosts.length === 0 && (
+        <p class="no-posts">まだ記事がありません。</p>
+      )}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .view-all {
+    font-size: 0.9rem;
+  }
+  
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .no-posts {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .post-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 
