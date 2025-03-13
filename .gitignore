@@ -1,0 +1,34 @@
+# ビルド出力
+dist/
+.output/
+
+# 依存関係
+node_modules/
+
+# ログ
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 環境変数
+.env
+.env.production
+
+# macOS固有のファイル
+.DS_Store
+
+# Astro固有のファイル
+.astro/
+
+# Obsidian固有のファイル
+.obsidian/
+
+# エディタ固有のファイル
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 一時ディレクトリ
+garageyokotaband/ 
