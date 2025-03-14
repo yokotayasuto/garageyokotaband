@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "333bd8d5e3fae34b",
+    "type": "split",
+    "children": [
+      {
+        "id": "af85524d11454bac",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "86ad248960f859b3",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b3a6db4f4d30899c",
+    "type": "split",
+    "children": [
+      {
+        "id": "baa81d0669fdcd82",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a03eedf0b0feba41",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "13e89287b94ac081",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:テスト",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a14f27332fdf28f7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d7179c2e5919ad3d",
+    "type": "split",
+    "children": [
+      {
+        "id": "bbc600ed4aeb1ae4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eac06e3154cbaeae",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Welcome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Welcome"
+            }
+          },
+          {
+            "id": "31044afe91fc0de9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Welcome"
+            }
+          },
+          {
+            "id": "1bb12c8700efc8e2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e2ab4410b927e46c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Welcome"
+            }
+          },
+          {
+            "id": "33389136def64db6",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 372.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "86ad248960f859b3",
+  "lastOpenFiles": [
+    "tsconfig.json",
+    "svelte.config.js",
+    "package.json",
+    "package-lock.json",
+    "astro.config.mjs",
+    "src/pages/index.astro",
+    "src/pages",
+    "src/assets/background.svg",
+    "src/assets/astro.svg",
+    "src/assets",
+    "src/layouts/Layout.astro",
+    "src/layouts",
+    "src/components/Welcome.astro",
+    "public/favicon.svg",
+    "node_modules/normalize-path/README.md",
+    "node_modules/crossws/README.md",
+    "node_modules/defu/README.md",
+    "node_modules/uncrypto/README.md",
+    "node_modules/svelte2tsx/README.md",
+    "node_modules/iron-webcrypto/README.md",
+    "node_modules/iron-webcrypto/LICENSE.md",
+    "node_modules/unstorage/README.md",
+    "node_modules/yoctocolors/readme.md",
+    "node_modules/ofetch/README.md",
+    "node_modules/ultrahtml/CHANGELOG.md",
+    "node_modules/ultrahtml/README.md",
+    "node_modules/zimmerframe/README.md",
+    "node_modules/readdirp/README.md",
+    "node_modules/fdir/README.md",
+    "node_modules/radix3/README.md",
+    "node_modules/destr/README.md",
+    "node_modules/yocto-spinner/readme.md",
+    "node_modules/node-fetch-native/README.md",
+    "node_modules/chokidar/README.md",
+    "node_modules/ufo/README.md",
+    "node_modules/smol-toml/README.md",
+    "node_modules/anymatch/node_modules/picomatch/CHANGELOG.md",
+    "node_modules/anymatch/node_modules/picomatch/README.md",
+    "node_modules/anymatch/README.md"
+  ]
+}
